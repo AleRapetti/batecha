@@ -8,6 +8,9 @@ const withMDX = mdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: process.env.GITHUB_PAGES === "true" ? "/borgotech--temporaneo-" : "",
+  assetPrefix: process.env.GITHUB_PAGES === "true" ? "/borgotech--temporaneo-/" : undefined,
+  trailingSlash: true,
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
   images: {
