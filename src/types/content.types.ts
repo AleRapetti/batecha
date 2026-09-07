@@ -54,6 +54,8 @@ export type Newsletter = {
 export type Social = Array<{
   /** Name of the social platform */
   name: string;
+  /** Whether this profile link should be displayed */
+  enabled?: boolean;
   /** Icon for the social platform
    * The icons are a part of "src/resources/icons.ts" file.
    * If you need a different icon, import it there and reference it everywhere else

@@ -15,7 +15,7 @@ import {
   Avatar,
   Line,
 } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { baseURL, about, person, social, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
@@ -112,7 +112,11 @@ export default async function Project({
                     ,{" "}
                   </Text>
                 )}
-                <SmartLink href={member.linkedIn}>{member.name}</SmartLink>
+                {social.some((item) => item.name === "LinkedIn") ? (
+                  <SmartLink href={member.linkedIn}>{member.name}</SmartLink>
+                ) : (
+                  member.name
+                )}
               </span>
             ))}
           </Text>

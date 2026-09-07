@@ -34,7 +34,7 @@ const newsletter: Newsletter = {
   description: <>Approfondimenti su tecnologia, territorio e innovazione locale.</>,
 };
 
-const social: Social = [
+const socialLinks: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
@@ -42,24 +42,28 @@ const social: Social = [
     name: "GitHub",
     icon: "github",
     link: "https://github.com/once-ui-system",
+    enabled: false,
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
     link: "https://www.linkedin.com/company/once-ui/",
+    enabled: false,
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
     link: "https://www.instagram.com/once_ui/",
+    enabled: false,
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
+    enabled: false,
     essential: true,
   },
   {
@@ -69,6 +73,9 @@ const social: Social = [
     essential: true,
   },
 ];
+
+// Profile links stay centralized here: switch enabled to true when each profile is ready.
+const social: Social = socialLinks.filter((item) => item.enabled !== false);
 
 const home: Home = {
   path: "/",
