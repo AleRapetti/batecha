@@ -1,0 +1,12 @@
+{
+  "firstName": "BorgoTech",
+  "lastName": "",
+  "name": "BorgoTech",
+  "role": "Studio di Ingegneria del Software & Digitalizzazione Territoriale",
+  "avatar": "/images/avatar.jpg",
+  "email": "campaegli.info@gmail.com",
+  "location": "Monti Simbruini / Roma, Italia",
+  "timeZone": "Europe/Rome",
+  "languages": ["Italiano", "English"],
+  "locale": "it"
+}
