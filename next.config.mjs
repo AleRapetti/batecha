@@ -7,7 +7,7 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: process.env.GITHUB_PAGES === "true" ? "export" : undefined,
   basePath: process.env.GITHUB_PAGES === "true" ? "/borgotech--temporaneo-" : "",
   assetPrefix: process.env.GITHUB_PAGES === "true" ? "/borgotech--temporaneo-/" : undefined,
   trailingSlash: true,
